@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Lucky Wheel</title>
+<style>
+body{display:flex;flex-direction:column;align-items:center;
+font-family:Arial;background:linear-gradient(to right,#ff9a9e,#fad0c4);}
+#wheel{width:180px;height:180px;border-radius:50%;
+background:conic-gradient(red,orange,yellow,green,cyan,blue,violet,red);
+display:flex;justify-content:center;align-items:center;
+font-size:40px;color:white;font-weight:bold;border:8px solid white;
+transition:transform 4s ease-out;}
+button{margin:20px;padding:10px 20px;border:none;border-radius:20px;
+background:#ff4081;color:white;font-size:18px;cursor:pointer;}
+h2{color:#333;}
+</style>
+</head>
+<body>
+
+<h1>🎡 Lucky Wheel</h1>
+<div id="wheel">?</div>
+<button onclick="spin()">Spin</button>
+<h2 id="result"></h2>
+
+<script>
+function spin(){
+ let num=Math.floor(Math.random()*100)+1;
+ let deg=3600+Math.random()*360;
+ wheel.style.transform=`rotate(${deg}deg)`;
+ result.innerHTML="Spinning...";
+ setTimeout(()=>{
+   wheel.innerHTML=num;
+   result.innerHTML=`🎉 Lucky Number: ${num}`;
+ },4000);
+}
+</script>
+
+</body>
+</html>
