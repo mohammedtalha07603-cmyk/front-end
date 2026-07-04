@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript DOM - To-Do App</title>
+    <style>
+        body{
+            font-family:Arial;
+            width:350px;
+            margin:30px auto;
+        }
+
+        input{
+            width:220px;
+            padding:8px;
+        }
+
+        button{
+            padding:8px 12px;
+        }
+
+        li{
+            margin:10px 0;
+        }
+    </style>
+</head>
+
+<body>
+
+<h2 id="heading">My To-Do Application</h2>
+
+<input type="text" id="task" placeholder="Enter Task">
+<button id="addBtn">Add Task</button>
+
+<ul id="taskList"></ul>
+
+<script>
+
+// DOM
+const heading = document.getElementById("heading");
+const taskInput = document.getElementById("task");
+const addButton = document.getElementById("addBtn");
+const taskList = document.getElementById("taskList");
+
+// Event Listener
+addButton.addEventListener("click", addTask);
+
+// Change heading when mouse is over it (Event)
+heading.addEventListener("mouseover", function(){
+    heading.innerHTML = "JavaScript DOM Manipulation";
+});
+
+// Load tasks from Local Storage
+window.onload = function(){
+    let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+
+    tasks.forEach(function(task){
+        createTask(task);
+    });
+};
+
+// Function
+function addTask(){
+
+    // Form Validation
+    if(taskInput.value.trim() == ""){
+        alert("Please enter a task.");
+        return;
+    }
+
+    createTask(taskInput.value);
+
+    let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+    tasks.push(taskInput.value);
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+
+    taskInput.value="";
+}
+
+// Create Task
+function createTask(task){
+
+    let li = document.createElement("li");
+    li.innerHTML = task + " ";
+
+    let removeBtn = document.createElement("button");
+    removeBtn.innerHTML = "Delete";
+
+    removeBtn.addEventListener("click", function(){
+
+        li.remove();
+
+        let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+
+        tasks = tasks.filter(function(item){
+            return item !== task;
+        });
+
+        localStorage.setItem("tasks", JSON.stringify(tasks));
+
+    });
+
+    li.appendChild(removeBtn);
+
+    taskList.appendChild(li);
+
+}
+
+</script>
+
+</body>
+</html>
