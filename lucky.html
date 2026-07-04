@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>🌟 Cosmic Lucky Number Generator 🌟</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:'Trebuchet MS', sans-serif;
+        }
+
+        body{
+            height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            background:linear-gradient(-45deg,#ff0080,#7928ca,#00dbde,#fc00ff);
+            background-size:400% 400%;
+            animation:bgMove 10s ease infinite;
+        }
+
+        @keyframes bgMove{
+            0%{background-position:0% 50%;}
+            50%{background-position:100% 50%;}
+            100%{background-position:0% 50%;}
+        }
+
+        .card{
+            width:420px;
+            text-align:center;
+            padding:40px;
+            border-radius:30px;
+            background:rgba(255,255,255,0.15);
+            backdrop-filter:blur(15px);
+            box-shadow:0 15px 35px rgba(0,0,0,0.4);
+            border:2px solid rgba(255,255,255,0.3);
+        }
+
+        h1{
+            color:white;
+            margin-bottom:25px;
+            font-size:32px;
+            text-shadow:0 0 15px #fff;
+        }
+
+        .circle{
+            width:180px;
+            height:180px;
+            margin:25px auto;
+            border-radius:50%;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            font-size:55px;
+            font-weight:bold;
+            color:white;
+            background:linear-gradient(135deg,#ff512f,#dd2476,#00c6ff);
+            box-shadow:0 0 30px rgba(255,255,255,0.5);
+            transition:0.5s;
+        }
+
+        button{
+            padding:15px 35px;
+            border:none;
+            border-radius:50px;
+            font-size:18px;
+            font-weight:bold;
+            color:white;
+            background:linear-gradient(to right,#00c9ff,#92fe9d);
+            cursor:pointer;
+            transition:0.3s;
+        }
+
+        button:hover{
+            transform:scale(1.1) rotate(2deg);
+        }
+
+        p{
+            color:white;
+            margin-top:20px;
+            font-size:18px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="card">
+    <h1>🎲 Lucky Number Generator 🎲</h1>
+
+    <div class="circle" id="result">?</div>
+
+    <button onclick="generateLuckyNumber()">
+        ✨ Reveal My Lucky Number
+    </button>
+
+    <p>Click the button and discover your fortune!</p>
+</div>
+
+<script>
+function generateLuckyNumber(){
+    let num = Math.floor(Math.random() * 100) + 1;
+    document.getElementById("result").innerHTML = num;
+}
+</script>
+
+</body>
+</html>
