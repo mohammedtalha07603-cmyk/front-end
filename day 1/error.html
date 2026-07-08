@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Validation Form</title>
+
+    <style>
+        body{
+            margin:0;
+            height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            background:linear-gradient(135deg,#6a11cb,#2575fc);
+            font-family:Arial,sans-serif;
+        }
+
+        .box{
+            background:white;
+            padding:40px;
+            border-radius:20px;
+            text-align:center;
+            width:350px;
+            box-shadow:0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        h2{
+            color:#2575fc;
+            margin-bottom:20px;
+        }
+
+        input{
+            width:90%;
+            padding:12px;
+            margin:10px 0;
+            border:2px solid #dcdcdc;
+            border-radius:10px;
+            outline:none;
+            font-size:16px;
+            transition:0.3s;
+        }
+
+        input:focus{
+            border-color:#2575fc;
+        }
+
+        button{
+            width:100%;
+            padding:12px;
+            border:none;
+            border-radius:10px;
+            background:#2575fc;
+            color:white;
+            font-size:16px;
+            cursor:pointer;
+            transition:0.3s;
+        }
+
+        button:hover{
+            background:#1b5fd9;
+        }
+
+        #span1{
+            color:red;
+            font-size:14px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+    <h2>User Registration</h2>
+
+    <input type="text" placeholder="Enter Your Name" id="uname" required><br>
+    <span id="span1"></span><br>
+
+    <input type="email" placeholder="Enter Email Id" id="uemail"><br>
+
+    <input type="password" placeholder="Enter Password" id="pass"><br>
+
+    <button onclick="validate()">Submit</button>
+</div>
+
+<script>
+function validate(){
+    let name = document.getElementById("uname").value;
+    if(name==""){
+        document.getElementById("span1").innerHTML="Please Enter the Name";
+    } else {
+        document.getElementById("span1").innerHTML="";
+    }
+
+    let email = document.getElementById("uemail").value;
+    if(!email.includes("@") || email==""){
+        alert("Invalid Email");
+    }
+
+    let pass = document.getElementById("pass").value;
+    if(pass.length < 8){
+        alert("Password should contain at least 8 characters");
+    }
+}
+</script>
+
+</body>
+</html>
