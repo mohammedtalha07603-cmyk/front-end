@@ -1,0 +1,704 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "admin-login-page;successful-admin-login-with-valid-credentials",
+        "keyword": "Scenario",
+        "line": 16,
+        "name": "Successful admin login with valid credentials",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 8168928500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 13,
+            "name": "the Admin Login page is open",
+            "match": {
+              "location": "features\\step_definitions\\admin_login_steps.js:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 658625900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 17,
+            "name": "I enter admin email \"admin@company.com\"",
+            "match": {
+              "location": "features\\step_definitions\\admin_login_steps.js:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 359040699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 18,
+            "name": "I enter admin password \"Admin@1234\"",
+            "match": {
+              "location": "features\\step_definitions\\admin_login_steps.js:33"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 242872099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 19,
+            "name": "I click the admin Sign In button",
+            "match": {
+              "location": "features\\step_definitions\\admin_login_steps.js:40"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 144380600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 20,
+            "name": "I should be redirected to the dashboard",
+            "match": {
+              "location": "features\\step_definitions\\employee_login_steps.js:49"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1498681599
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 154572500
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@admin",
+            "line": 9
+          },
+          {
+            "name": "@admin",
+            "line": 15
+          },
+          {
+            "name": "@valid_login",
+            "line": 15
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "admin-login-page;failed-admin-login-with-wrong-credentials",
+        "keyword": "Scenario",
+        "line": 23,
+        "name": "Failed admin login with wrong credentials",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 839174599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 13,
+            "name": "the Admin Login page is open",
+            "match": {
+              "location": "features\\step_definitions\\admin_login_steps.js:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 313990400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 24,
+            "name": "I enter admin email \"wrong@company.com\"",
+            "match": {
+              "location": "features\\step_definitions\\admin_login_steps.js:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 224828499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 25,
+            "name": "I enter admin password \"WrongPass\"",
+            "match": {
+              "location": "features\\step_definitions\\admin_login_steps.js:33"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 168442600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 26,
+            "name": "I click the admin Sign In button",
+            "match": {
+              "location": "features\\step_definitions\\admin_login_steps.js:40"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 113028000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 27,
+            "name": "I should see the admin error message \"Invalid email or password\"",
+            "match": {
+              "location": "features\\step_definitions\\admin_login_steps.js:47"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1605706799
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 44107199
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@admin",
+            "line": 9
+          },
+          {
+            "name": "@admin",
+            "line": 22
+          },
+          {
+            "name": "@invalid_login",
+            "line": 22
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "admin-login-page;admin-login-with-empty-fields",
+        "keyword": "Scenario",
+        "line": 30,
+        "name": "Admin login with empty fields",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 671550200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 13,
+            "name": "the Admin Login page is open",
+            "match": {
+              "location": "features\\step_definitions\\admin_login_steps.js:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 288175699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 31,
+            "name": "I click the admin Sign In button",
+            "match": {
+              "location": "features\\step_definitions\\admin_login_steps.js:40"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 112388100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 32,
+            "name": "I should see the admin error message \"Please fill in all fields\"",
+            "match": {
+              "location": "features\\step_definitions\\admin_login_steps.js:47"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 33014899
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 82609699
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@admin",
+            "line": 9
+          },
+          {
+            "name": "@admin",
+            "line": 29
+          },
+          {
+            "name": "@empty_fields",
+            "line": 29
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "admin-login-page",
+    "line": 10,
+    "keyword": "Feature",
+    "name": "Admin Login Page",
+    "tags": [
+      {
+        "name": "@admin",
+        "line": 9
+      }
+    ],
+    "uri": "features\\admin_login.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "employee-login-page;successful-employee-login-with-valid-credentials",
+        "keyword": "Scenario",
+        "line": 17,
+        "name": "Successful employee login with valid credentials",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 687263500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 14,
+            "name": "the Employee Login page is open",
+            "match": {
+              "location": "features\\step_definitions\\employee_login_steps.js:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 288366399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 18,
+            "name": "I enter employee ID \"EMP-00123\"",
+            "match": {
+              "location": "features\\step_definitions\\employee_login_steps.js:28"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 185925300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 19,
+            "name": "I enter employee password \"Emp@1234\"",
+            "match": {
+              "location": "features\\step_definitions\\employee_login_steps.js:35"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 164571400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 20,
+            "name": "I click the employee Sign In button",
+            "match": {
+              "location": "features\\step_definitions\\employee_login_steps.js:42"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 76582800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 21,
+            "name": "I should be redirected to the dashboard",
+            "match": {
+              "location": "features\\step_definitions\\employee_login_steps.js:49"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1496555300
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 67515400
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@employee",
+            "line": 10
+          },
+          {
+            "name": "@employee",
+            "line": 16
+          },
+          {
+            "name": "@valid_login",
+            "line": 16
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "employee-login-page;failed-employee-login-with-invalid-credentials",
+        "keyword": "Scenario",
+        "line": 24,
+        "name": "Failed employee login with invalid credentials",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 773270599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 14,
+            "name": "the Employee Login page is open",
+            "match": {
+              "location": "features\\step_definitions\\employee_login_steps.js:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 298851099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 25,
+            "name": "I enter employee ID \"WRONG-ID\"",
+            "match": {
+              "location": "features\\step_definitions\\employee_login_steps.js:28"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 181470299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 26,
+            "name": "I enter employee password \"WrongPass\"",
+            "match": {
+              "location": "features\\step_definitions\\employee_login_steps.js:35"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 168488300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 27,
+            "name": "I click the employee Sign In button",
+            "match": {
+              "location": "features\\step_definitions\\employee_login_steps.js:42"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 99801799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 28,
+            "name": "I should see the employee error message \"Invalid ID or password\"",
+            "match": {
+              "location": "features\\step_definitions\\employee_login_steps.js:64"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1540767400
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 89930400
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@employee",
+            "line": 10
+          },
+          {
+            "name": "@employee",
+            "line": 23
+          },
+          {
+            "name": "@invalid_login",
+            "line": 23
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "employee-login-page;employee-login-with-empty-fields",
+        "keyword": "Scenario",
+        "line": 31,
+        "name": "Employee login with empty fields",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 706944200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 14,
+            "name": "the Employee Login page is open",
+            "match": {
+              "location": "features\\step_definitions\\employee_login_steps.js:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 283822899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 32,
+            "name": "I click the employee Sign In button",
+            "match": {
+              "location": "features\\step_definitions\\employee_login_steps.js:42"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 134335900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 33,
+            "name": "I should see the employee error message \"Please fill in all fields\"",
+            "match": {
+              "location": "features\\step_definitions\\employee_login_steps.js:64"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 47373400
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 87858100
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@employee",
+            "line": 10
+          },
+          {
+            "name": "@employee",
+            "line": 30
+          },
+          {
+            "name": "@empty_fields",
+            "line": 30
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "employee-login-page;employee-login-with-missing-password",
+        "keyword": "Scenario",
+        "line": 36,
+        "name": "Employee login with missing password",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 658668600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 14,
+            "name": "the Employee Login page is open",
+            "match": {
+              "location": "features\\step_definitions\\employee_login_steps.js:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 312363499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 37,
+            "name": "I enter employee ID \"EMP-00123\"",
+            "match": {
+              "location": "features\\step_definitions\\employee_login_steps.js:28"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 147678100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 38,
+            "name": "I click the employee Sign In button",
+            "match": {
+              "location": "features\\step_definitions\\employee_login_steps.js:42"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 80005300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 39,
+            "name": "I should see the employee error message \"Please fill in all fields\"",
+            "match": {
+              "location": "features\\step_definitions\\employee_login_steps.js:64"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 41622299
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 56644499
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@employee",
+            "line": 10
+          },
+          {
+            "name": "@employee",
+            "line": 35
+          },
+          {
+            "name": "@empty_password",
+            "line": 35
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "employee-login-page",
+    "line": 11,
+    "keyword": "Feature",
+    "name": "Employee Login Page",
+    "tags": [
+      {
+        "name": "@employee",
+        "line": 10
+      }
+    ],
+    "uri": "features\\employee_login.feature"
+  }
+]

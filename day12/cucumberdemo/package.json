@@ -1,0 +1,16 @@
+{
+  "name": "cucumberdemo",
+  "version": "1.0.0",
+  "description": "Cucumber BDD Automation Testing for Employee Management Login Page",
+  "scripts": {
+    "test": "npx cucumber-js --config cucumber.json",
+    "test:employee": "npx cucumber-js --config cucumber.json --tags @employee",
+    "test:admin": "npx cucumber-js --config cucumber.json --tags @admin"
+  },
+  "dependencies": {
+    "selenium-webdriver": "^4.27.0"
+  },
+  "devDependencies": {
+    "@cucumber/cucumber": "^11.3.0"
+  }
+}
